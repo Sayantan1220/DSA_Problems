@@ -1,3 +1,4 @@
+package Solution;
 /*Maximum and minimum of an array using minimum number of comparisons
 If n is odd then initialize min and max as first element. 
 If n is even then initialize min and max as minimum and maximum of the first two elements respectively. 
