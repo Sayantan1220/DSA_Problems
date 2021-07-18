@@ -1,4 +1,4 @@
-package Solution;
+package Solution.Array;
 /*Given an array (or string), the task is to reverse the array/string.
 1) Initialize start and end indexes as start = 0, end = n-1 
 2) Swap arr[start] with arr[end] 
