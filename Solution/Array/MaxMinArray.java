@@ -55,5 +55,4 @@ public class MaxMinArray {
         int arr[] = { 10, 73, 64, -107, 210 };
         maxMin(arr, arr.length);
     }
-
 }
