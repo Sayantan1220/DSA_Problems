@@ -1,7 +1,7 @@
 package Solution.DynamicProgramming;
 
 public class DeleteandEarn {
-     public int deleteAndEarn(int[] nums) {
+     public static int deleteAndEarn(int[] nums) {
          int n = 10001;
         int[] values = new int[n];
          for (int num : nums)
@@ -17,7 +17,8 @@ public class DeleteandEarn {
             return Math.max(take, skip);
         }
      public static void main(String args[]) {
-        int res = deleteAndEarn({3,4,2});
-        System.out.println(res);
+        int[] res = {3,4,2};
+        int result = deleteAndEarn(res);
+        System.out.println(result);
     }
 }
