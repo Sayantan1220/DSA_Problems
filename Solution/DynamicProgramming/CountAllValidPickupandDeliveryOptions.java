@@ -18,5 +18,4 @@ public class CountAllValidPickupandDeliveryOptions {
         int res = countOrders(30);
         System.out.println(res);
     }
-    
 }
