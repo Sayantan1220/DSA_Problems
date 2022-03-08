@@ -9,7 +9,7 @@ public class LinkedListCycle {
         next = null;
         }
 
-    public boolean hasCycle(LinkedListCycle head) {
+    public static boolean hasCycle(LinkedListCycle head) {
         if(head==null) return false;
         LinkedListCycle walker = head;
         LinkedListCycle runner = head;
@@ -20,5 +20,14 @@ public class LinkedListCycle {
         }
         return false;
     }
-    
+
+    public static void main(String args[]) {
+        LinkedListCycle head = new LinkedListCycle(1);
+        head.next = new LinkedListCycle(2);
+        head.next = new LinkedListCycle(0);
+        head.next = new LinkedListCycle(-4);
+
+        boolean res = hasCycle(head);
+        System.out.println(res);
+    }  
 }
