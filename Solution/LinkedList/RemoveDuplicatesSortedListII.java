@@ -4,18 +4,18 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 
 package Solution.LinkedList;
 
- class Solution {
+class RemoveDuplicatesSortedListII {
 
     int val;
-    Solution next;
-    Solution() {};
-    Solution(int val) { this.val = val; }
-    Solution(int val, Solution next) { this.val = val; this.next = next; }
+    RemoveDuplicatesSortedListII next;
+    RemoveDuplicatesSortedListII() {};
+    RemoveDuplicatesSortedListII(int val) { this.val = val; }
+    RemoveDuplicatesSortedListII(int val, RemoveDuplicatesSortedListII next) { this.val = val; this.next = next; }
 
-    public static Solution deleteDuplicates(Solution head) {
+    public static RemoveDuplicatesSortedListII deleteDuplicates(RemoveDuplicatesSortedListII head) {
         //use two pointers, slow - track the node before the dup nodes, 
         // fast - to find the last node of dups.
-        Solution dummy = new Solution(0), fast = head, slow = dummy;
+        RemoveDuplicatesSortedListII dummy = new RemoveDuplicatesSortedListII(0), fast = head, slow = dummy;
         slow.next = fast;
         while(fast != null) {
             while (fast.next != null && fast.val == fast.next.val) {
@@ -34,12 +34,13 @@ package Solution.LinkedList;
     }
 
     public static void main(String args[]) {
-        Solution head = new Solution(1);
-        head.next = new Solution(2);
-        head.next = new Solution(0);
-        head.next = new Solution(-4);
+        RemoveDuplicatesSortedListII head = new RemoveDuplicatesSortedListII(1);
+        head.next = new RemoveDuplicatesSortedListII(1);
+        head.next.next = new RemoveDuplicatesSortedListII(1);
+        head.next.next.next = new RemoveDuplicatesSortedListII(2);
+        head.next.next.next.next = new RemoveDuplicatesSortedListII(3);
 
-        Solution res = deleteDuplicates(head);
+        RemoveDuplicatesSortedListII res = deleteDuplicates(head);
         while(res != null) {
             System.out.print(res.val + " ");
             res = res.next;
