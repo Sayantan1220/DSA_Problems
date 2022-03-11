@@ -41,8 +41,10 @@ public class AddTwoNumbers {
     public static void main(String args[]) {
         AddTwoNumbers l1 = new AddTwoNumbers(2);
         l1.next = new AddTwoNumbers(4);
+        l1.next.next = new AddTwoNumbers(3);
         AddTwoNumbers l2 = new AddTwoNumbers(5);
-        l1.next = new AddTwoNumbers(6);
+        l2.next = new AddTwoNumbers(6);
+        l2.next.next = new AddTwoNumbers(4);
 
         AddTwoNumbers res = addTwoNumbers(l1, l2);
         while(res != null) {
