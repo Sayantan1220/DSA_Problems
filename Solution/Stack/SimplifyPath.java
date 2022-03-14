@@ -24,7 +24,10 @@ public class SimplifyPath {
         String res = "";
         for (String dir : stack) res = "/" + dir + res;
         return res.isEmpty() ? "/" : res;
+    }  
+    public static void main(String args[]) {
+        String path = "/home//foo/";
+        String res = simplifyPath(path);
+        System.out.println(res);
     }
-    
-
 }
