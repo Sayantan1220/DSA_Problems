@@ -13,7 +13,6 @@ package Solution.Stack;
 import java.util.*;
 
 public class SimplifyPath {
-    
     public static String simplifyPath(String path) {
         Deque<String> stack = new LinkedList<>();
         Set<String> skip = new HashSet<>(Arrays.asList("..",".",""));

@@ -6,7 +6,6 @@ https://leetcode.com/problems/counting-bits/
 package Solution.Array;
 
 public class CountingBits {
-
      public static int[] countBits(int n) {
          int res[] = new int[n + 1]; 
             
