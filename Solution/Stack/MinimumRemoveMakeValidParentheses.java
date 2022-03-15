@@ -11,19 +11,24 @@ package Solution.Stack;
 import java.util.Stack;
 
 public class MinimumRemoveMakeValidParentheses {
-
-public String minRemoveToMakeValid(String s) {
-    StringBuilder sb = new StringBuilder(s);
-    Stack<Integer> st = new Stack<>();
-    for (int i = 0; i < sb.length(); ++i) {
-        if (sb.charAt(i) == '(') st.add(i);
-        if (sb.charAt(i) == ')') {
-            if (!st.empty()) st.pop();
-        else sb.setCharAt(i, '*');
+    public static String minRemoveToMakeValid(String s) {
+        StringBuilder sb = new StringBuilder(s);
+        Stack<Integer> st = new Stack<>();
+        for (int i = 0; i < sb.length(); ++i) {
+            if (sb.charAt(i) == '(') st.add(i);
+            if (sb.charAt(i) == ')') {
+                if (!st.empty()) st.pop();
+            else sb.setCharAt(i, '*');
+            }
         }
-    }
-    while (!st.empty())
-        sb.setCharAt(st.pop(), '*');
-    return sb.toString().replaceAll("\\*", "");
+        while (!st.empty())
+            sb.setCharAt(st.pop(), '*');
+        return sb.toString().replaceAll("\\*", "");
+        }
+
+    public static void main(String args[]) {
+        String s = "lee(t(c)o)de)";
+        String res = minRemoveToMakeValid(s);
+        System.out.println(res);
     }
 }
