@@ -1,8 +1,13 @@
+/*Given a string s, remove duplicate letters so that every letter appears once and only once. 
+You must make sure your result is the smallest in lexicographical order among all possible results.
+https://leetcode.com/problems/remove-duplicate-letters/
+*/
+
 package Solution.Stack;
 import java.util.Stack;
 
 public class RemoveDuplicateLetters {
-    public String removeDuplicateLetters(String sr) {
+    public static String removeDuplicateLetters(String sr) {
 
         int[] res = new int[26]; //will contain number of occurences of character (i+'a')
         boolean[] visited = new boolean[26]; //will contain if character (i+'a') is present in current result Stack
@@ -25,12 +30,18 @@ public class RemoveDuplicateLetters {
             st.push(s); //add current character and mark it as visited
             visited[index]=true;
         } 
-         
+
         StringBuilder sb = new StringBuilder();
         //pop character from stack and build answer string from back
         while(!st.isEmpty()){
             sb.insert(0,st.pop());
         }
         return sb.toString();
-    }  
+    }
+    
+    public static void main(String args[]) {
+        String s = "cbacdcbc";
+        String res = removeDuplicateLetters(s);
+        System.out.println(res);
+    }
 }
