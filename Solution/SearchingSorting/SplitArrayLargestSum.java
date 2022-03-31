@@ -1,7 +1,13 @@
+/*Given an array nums which consists of non-negative integers and an integer m, 
+you can split the array into m non-empty continuous subarrays.
+Write an algorithm to minimize the largest sum among these m subarrays.
+https://leetcode.com/problems/split-array-largest-sum/
+*/
+
 package Solution.SearchingSorting;
 
 public class SplitArrayLargestSum {
-    public int splitArray(int[] nums, int m) {
+    public static int splitArray(int[] nums, int m) {
         int max = 0; long sum = 0;
         for (int num : nums) {
             max = Math.max(num, max);
@@ -20,7 +26,7 @@ public class SplitArrayLargestSum {
         }
         return (int)l;
     }
-    public boolean valid(long target, int[] nums, int m) {
+    public static boolean valid(long target, int[] nums, int m) {
         int count = 1;
         long total = 0;
         for(int num : nums) {
@@ -35,5 +41,11 @@ public class SplitArrayLargestSum {
         }
         return true;
     }
-    
+
+    public static void main(String args[]) {
+        int nums[] = {1,2,3,4,5};
+        int m = 2;
+        int res = splitArray(nums, m);
+        System.out.println(res);
+    }
 }
