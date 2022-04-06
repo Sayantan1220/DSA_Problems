@@ -1,7 +1,13 @@
+/*Given an integer array arr, and an integer target, 
+return the number of tuples i, j, k such that i < j < k and arr[i] + arr[j] + arr[k] == target.
+As the answer can be very large, return it modulo 109 + 7.
+https://leetcode.com/problems/3sum-with-multiplicity/
+*/
+
 package Solution.SearchingSorting;
 
-public class threeSumWithMultiplicity {
-    public int threeSumMulti(int[] A, int target) {
+public class ThreeSumWithMultiplicity {
+    public static int threeSumMulti(int[] A, int target) {
         long[] c = new long[101];
         for (int a : A) c[a]++;
         long res = 0;
@@ -17,5 +23,12 @@ public class threeSumWithMultiplicity {
                     res += c[i] * c[j] * c[k];
             }
         return (int)(res % (1e9 + 7));
-    }  
+    }
+
+    public static void main(String args[]) {
+        int A[] = {1,1,2,2,3,3,4,4,5,5};
+        int target = 8;
+        int res = threeSumMulti(A, target);
+        System.out.println(res);
+    }
 }
