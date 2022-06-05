@@ -19,7 +19,7 @@ public class MaxSubArraySum {
         return maxSum;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int arr[] = { 1, 2, 7, -4, 3, 2, -10, 9, 1 };
         long result = maxSubarraySum(arr, arr.length);
         System.out.println(result);
