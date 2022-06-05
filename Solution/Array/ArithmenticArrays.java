@@ -7,7 +7,7 @@ https://leetcode.com/problems/arithmetic-slices/
 
 package Solution.Array;
 
-class Solution {
+class ArithmenticArrays {
     public static int numberOfArithmeticSlices(int[] A) {
      int curr = 0, sum = 0;
      for (int i=2; i<A.length; i++)
