@@ -25,7 +25,7 @@ public class VariableAfterPerformingOperations {
     }
 
     public static void main(String[] args) {
-        String arr[] = { "--X","X++","X++" };
+        String[] arr = { "--X","X++","X++" };
         int result = finalValueAfterOperations(arr);
         System.out.println(result);
     }
