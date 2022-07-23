@@ -1,3 +1,9 @@
+/*
+Given an integer array nums and an integer k,
+return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k.
+https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/
+*/
+
 package Solution.Array;
 
 public class CountNumberPairsAbsoluteDifference {
