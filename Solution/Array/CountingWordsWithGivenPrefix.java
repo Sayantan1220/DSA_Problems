@@ -12,7 +12,7 @@ public class CountingWordsWithGivenPrefix {
 
         int count = 0;
         int size = pref.length();
-        String sub = null;
+        String sub;
         for (String word : words){
             if (word.length() >= size){
                 sub = word.substring(0, size);
