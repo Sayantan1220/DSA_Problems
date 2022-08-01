@@ -1,3 +1,10 @@
+/*
+Given an integer array of size n, find all elements that appear more than n/3 times.
+https://leetcode.com/problems/majority-element-ii/
+TC -> O(n) + O(n)
+SC -> O(1)
+*/
+
 package Solution.Array;
 
 import java.util.ArrayList;
