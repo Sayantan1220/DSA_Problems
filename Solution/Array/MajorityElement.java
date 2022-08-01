@@ -4,14 +4,13 @@ public class MajorityElement {
     public static int majorityElement(int[] nums) {
         int count = 0;
         int majorityElement = 0;
-        for (int i = 0; i < nums.length; i++){
-            if (count == 0){
-                majorityElement = nums[i];
+        for (int num : nums) {
+            if (count == 0) {
+                majorityElement = num;
             }
-            if (nums [i] == majorityElement){
+            if (num == majorityElement) {
                 count += 1;
-            }
-            else{
+            } else {
                 count -= 1;
             }
         }
