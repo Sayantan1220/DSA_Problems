@@ -74,8 +74,8 @@ public class ReversePairs {
         return count ;
     }
 
-    public static void main(String args[]) {
-        int nums[] = {2,4,3,5,1};
+    public static void main(String[] args) {
+        int[] nums = {2,4,3,5,1};
         int res = reversePairs(nums);
         System.out.println(res);
     }
