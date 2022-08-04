@@ -43,7 +43,7 @@ public class FourSum {
     }
 
     public static void main(String[] args) {
-        int nums[] = { 1,0,-1,0,-2,2 };
+        int[] nums = { 1,0,-1,0,-2,2 };
         int target = 0;
         List<List<Integer>> result = fourSum(nums, target);
         System.out.println(result);
