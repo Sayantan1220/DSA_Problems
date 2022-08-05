@@ -1,3 +1,10 @@
+/*
+Given an unsorted array of integers nums,
+return the length of the longest consecutive elements sequence.
+You must write an algorithm that runs in O(n) time.
+https://leetcode.com/problems/longest-consecutive-sequence/
+*/
+
 package Solution.Array;
 
 import java.util.HashSet;
@@ -28,8 +35,8 @@ public class LongestConsecutiveSequence {
         return longestStreak;
     }
 
-    public static void main(String args[]) {
-        int nums[] = {2,7,4,1,8,1};
+    public static void main(String[] args) {
+        int[] nums = {2,7,4,1,8,1};
         int res = longestConsecutive(nums);
         System.out.println(res);
     }
