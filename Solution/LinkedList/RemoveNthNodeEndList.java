@@ -25,7 +25,7 @@ public class RemoveNthNodeEndList {
         return start.next;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         RemoveNthNodeEndList l1 = new RemoveNthNodeEndList(1);
         l1.next = new RemoveNthNodeEndList(2);
         l1.next.next = new RemoveNthNodeEndList(3);
