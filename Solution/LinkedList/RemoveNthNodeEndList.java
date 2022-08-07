@@ -4,9 +4,7 @@ public class RemoveNthNodeEndList {
 
     int val;
     RemoveNthNodeEndList next;
-    RemoveNthNodeEndList() {}
     RemoveNthNodeEndList(int val) { this.val = val; }
-    RemoveNthNodeEndList(int val, RemoveNthNodeEndList next) { this.val = val; this.next = next; }
 
     public static RemoveNthNodeEndList removeNthFromEnd(RemoveNthNodeEndList head, int n) {
         RemoveNthNodeEndList start = new RemoveNthNodeEndList(0);
