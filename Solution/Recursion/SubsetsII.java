@@ -33,8 +33,8 @@ public class SubsetsII {
 
     }
 
-    public static void main(String args[]) {
-        int nums[] = {1,2,2};
+    public static void main(String[] args) {
+        int[] nums = {1,2,2};
         List<List<Integer>> res = subsetsWithDup(nums);
         System.out.println(res);
     }
