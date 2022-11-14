@@ -16,7 +16,7 @@ public class BrokenCalculator {
         return 1 + brokenCalc(startValue, target + 1);
     }
     
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         int start = 3;
         int target = 10;
         int res = brokenCalc(start, target);
