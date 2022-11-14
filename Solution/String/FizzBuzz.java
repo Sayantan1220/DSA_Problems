@@ -7,7 +7,7 @@ public class FizzBuzz {
 
     public static List<String> fizzBuzz(int n) {
 
-        List<String> result = new ArrayList();
+        List<String> result = new ArrayList<String>();
         for (int i = 1; i <= n; i++){
             if (i % 3 == 0 && i % 5 == 0){
                 result.add("FizzBuzz");
@@ -22,12 +22,10 @@ public class FizzBuzz {
                 result.add(Integer.toString(i));
             }
         }
-
         return result;
     }
 
-
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         List<String> res = fizzBuzz(15);
         System.out.println(res);
     }
